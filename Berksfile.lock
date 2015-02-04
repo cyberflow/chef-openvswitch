@@ -1,0 +1,9 @@
+DEPENDENCIES
+  apt (~> 2.0)
+  openvswitch
+    path: .
+    metadata: true
+
+GRAPH
+  apt (2.6.1)
+  openvswitch (0.1.0)

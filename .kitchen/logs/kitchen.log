@@ -1,0 +1,50 @@
+I, [2015-02-03T17:01:55.973002 #7684]  INFO -- Kitchen: -----> Starting Kitchen (v1.2.2.dev)
+I, [2015-02-03T17:01:58.235628 #7684]  INFO -- Kitchen: -----> Creating <default-ubuntu-1404>...
+E, [2015-02-03T17:08:08.756084 #7684] ERROR -- Kitchen: ------Exception-------
+E, [2015-02-03T17:08:08.756475 #7684] ERROR -- Kitchen: Class: Kitchen::ActionFailed
+E, [2015-02-03T17:08:08.756514 #7684] ERROR -- Kitchen: Message: Failed to complete #create action: [Authentication failed for user cloud-user@206.54.167.57]
+E, [2015-02-03T17:08:08.756534 #7684] ERROR -- Kitchen: ---Nested Exception---
+E, [2015-02-03T17:08:08.756550 #7684] ERROR -- Kitchen: Class: Net::SSH::AuthenticationFailed
+E, [2015-02-03T17:08:08.756581 #7684] ERROR -- Kitchen: Message: Authentication failed for user cloud-user@206.54.167.57
+E, [2015-02-03T17:08:08.756599 #7684] ERROR -- Kitchen: ------Backtrace-------
+E, [2015-02-03T17:08:08.756614 #7684] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.1.0/gems/net-ssh-2.9.1/lib/net/ssh.rb:219:in `start'
+E, [2015-02-03T17:08:08.756629 #7684] ERROR -- Kitchen: /Users/cyberflow/.chefdk/gem/ruby/2.1.0/gems/fog-core-1.27.2/lib/fog/core/ssh.rb:63:in `run'
+E, [2015-02-03T17:08:08.756644 #7684] ERROR -- Kitchen: /Users/cyberflow/.chefdk/gem/ruby/2.1.0/gems/kitchen-openstack-1.7.0/lib/kitchen/driver/openstack.rb:300:in `add_ohai_hint'
+E, [2015-02-03T17:08:08.756681 #7684] ERROR -- Kitchen: /Users/cyberflow/.chefdk/gem/ruby/2.1.0/gems/kitchen-openstack-1.7.0/lib/kitchen/driver/openstack.rb:88:in `create'
+E, [2015-02-03T17:08:08.756696 #7684] ERROR -- Kitchen: /opt/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:280:in `public_send'
+E, [2015-02-03T17:08:08.756711 #7684] ERROR -- Kitchen: /opt/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:280:in `block in perform_action'
+E, [2015-02-03T17:08:08.756726 #7684] ERROR -- Kitchen: /opt/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:315:in `call'
+E, [2015-02-03T17:08:08.756740 #7684] ERROR -- Kitchen: /opt/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:315:in `synchronize_or_call'
+E, [2015-02-03T17:08:08.756755 #7684] ERROR -- Kitchen: /opt/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:290:in `block in action'
+E, [2015-02-03T17:08:08.756779 #7684] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/2.1.0/benchmark.rb:279:in `measure'
+E, [2015-02-03T17:08:08.756794 #7684] ERROR -- Kitchen: /opt/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:289:in `action'
+E, [2015-02-03T17:08:08.756809 #7684] ERROR -- Kitchen: /opt/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:280:in `perform_action'
+E, [2015-02-03T17:08:08.756824 #7684] ERROR -- Kitchen: /opt/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:259:in `create_action'
+E, [2015-02-03T17:08:08.756838 #7684] ERROR -- Kitchen: /opt/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:253:in `block in transition_to'
+E, [2015-02-03T17:08:08.756853 #7684] ERROR -- Kitchen: /opt/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:252:in `each'
+E, [2015-02-03T17:08:08.756875 #7684] ERROR -- Kitchen: /opt/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:252:in `transition_to'
+E, [2015-02-03T17:08:08.756890 #7684] ERROR -- Kitchen: /opt/chefdk/embedded/apps/test-kitchen/lib/kitchen/instance.rb:119:in `converge'
+E, [2015-02-03T17:08:08.756905 #7684] ERROR -- Kitchen: /opt/chefdk/embedded/apps/test-kitchen/lib/kitchen/command.rb:109:in `public_send'
+E, [2015-02-03T17:08:08.756919 #7684] ERROR -- Kitchen: /opt/chefdk/embedded/apps/test-kitchen/lib/kitchen/command.rb:109:in `block (2 levels) in run_action'
+E, [2015-02-03T17:08:08.756934 #7684] ERROR -- Kitchen: ----------------------
+I, [2015-02-03T18:03:11.109460 #7756]  INFO -- Kitchen: -----> Starting Kitchen (v1.2.2.dev)
+I, [2015-02-03T18:03:13.482029 #7756]  INFO -- Kitchen: -----> Creating <default-ubuntu-1404>...
+I, [2015-02-03T18:09:39.724648 #7756]  INFO -- Kitchen: -----> Converging <default-ubuntu-1404>...
+E, [2015-02-03T18:12:11.773920 #7756] ERROR -- Kitchen: Converge failed on instance <default-ubuntu-1404>.
+I, [2015-02-03T18:30:11.089216 #7877]  INFO -- Kitchen: -----> Starting Kitchen (v1.2.2.dev)
+I, [2015-02-03T18:30:14.197415 #7877]  INFO -- Kitchen: -----> Destroying <default-ubuntu-1404>...
+I, [2015-02-03T18:30:18.446650 #7877]  INFO -- Kitchen: -----> Kitchen is finished. (0m7.36s)
+I, [2015-02-04T10:32:45.864360 #9805]  INFO -- Kitchen: -----> Starting Kitchen (v1.2.2.dev)
+I, [2015-02-04T10:32:48.443436 #9805]  INFO -- Kitchen: -----> Creating <default-ubuntu-1404>...
+I, [2015-02-04T10:33:34.784721 #9805]  INFO -- Kitchen: -----> Converging <default-ubuntu-1404>...
+I, [2015-02-04T10:35:16.336400 #9805]  INFO -- Kitchen: -----> Kitchen is finished. (2m30.47s)
+I, [2015-02-04T11:51:29.490450 #10033]  INFO -- Kitchen: -----> Starting Kitchen (v1.2.2.dev)
+I, [2015-02-04T11:51:32.090877 #10033]  INFO -- Kitchen: -----> Destroying <default-ubuntu-1404>...
+I, [2015-02-04T11:51:34.718865 #10033]  INFO -- Kitchen: -----> Kitchen is finished. (0m5.23s)
+I, [2015-02-04T11:55:06.184947 #10039]  INFO -- Kitchen: -----> Starting Kitchen (v1.2.2.dev)
+I, [2015-02-04T11:55:08.829654 #10039]  INFO -- Kitchen: -----> Creating <default-ubuntu-1404>...
+I, [2015-02-04T11:55:54.711803 #10039]  INFO -- Kitchen: -----> Converging <default-ubuntu-1404>...
+I, [2015-02-04T11:57:25.783744 #10039]  INFO -- Kitchen: -----> Kitchen is finished. (2m19.60s)
+I, [2015-02-04T12:52:33.235287 #10333]  INFO -- Kitchen: -----> Starting Kitchen (v1.2.2.dev)
+I, [2015-02-04T12:52:37.081625 #10333]  INFO -- Kitchen: -----> Destroying <default-ubuntu-1404>...
+I, [2015-02-04T12:52:39.795095 #10333]  INFO -- Kitchen: -----> Kitchen is finished. (0m6.56s)

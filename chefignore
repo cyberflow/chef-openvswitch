@@ -1,0 +1,16 @@
+# Testing #
+###########
+.kitchen/*
+.kitchen.yml
+.kitchen.local.yml
+test/*
+
+# SCM #
+#######
+.git
+*/.git
+.gitignore
+
+# Rubocop #
+###########
+.rubocop.yml
