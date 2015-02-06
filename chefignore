@@ -4,6 +4,13 @@
 .kitchen.yml
 .kitchen.local.yml
 test/*
+Strainerfile
+spec/*
+
+# Berksfile #
+#############
+Berksfile
+Berksfile.lock
 
 # SCM #
 #######
