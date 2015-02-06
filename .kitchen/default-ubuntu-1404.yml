@@ -1,5 +1,0 @@
----
-server_id: 21beb863-0388-42d9-9abb-ad523171e6e5
-hostname: 206.54.167.92
-ssh_key: "~/.ssh/id_rsa"
-last_action: converge
