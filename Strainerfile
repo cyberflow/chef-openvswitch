@@ -1,0 +1,6 @@
+# Strainerfile
+knife: bundle exec knife cookbook test $COOKBOOK
+foodcritic: bundle exec foodcritic $SANDBOX/$COOKBOOK
+chefspec:   bundle exec rspec --color --format documentation
+rubocop:    bundle exec rubocop $COOKBOOK
+# kitchen:    bundle exec kitchen test

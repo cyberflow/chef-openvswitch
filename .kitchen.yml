@@ -18,5 +18,5 @@ platforms:
 suites:
   - name: default
     run_list:
-      - recipe[openvswitch::default]
+      - recipe[fake::default]
     attributes:

@@ -1,9 +1,13 @@
 DEPENDENCIES
   apt (~> 2.0)
+  fake
+    path: test/fixtures/cookbooks/fake
   openvswitch
     path: .
     metadata: true
 
 GRAPH
   apt (2.6.1)
+  fake (1.0.0)
+    openvswitch (>= 0.0.0)
   openvswitch (0.1.0)

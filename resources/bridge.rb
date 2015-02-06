@@ -1,8 +1,9 @@
 #
 # Cookbook Name:: openvswitch
-# Recipe:: default
+# Resource:: add_br
 #
-# Copyright 2015, Webzilla
+# Author:: Bryan W. Berry <bryan.berry@gmail.com>
+# Copyright 2012, Opscode Inc.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -17,6 +18,12 @@
 # limitations under the License.
 #
 
-node['openvswitch']['packages'].each do |pkg|
-  package pkg
+actions :add_br, :del_br
+
+attribute :name,  :kind_of => String, :name_attribute => true
+attribute :ports, :kind_of => Array
+
+def initialize(*args)
+  super
+  @action = :add_br
 end
