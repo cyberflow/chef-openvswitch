@@ -17,7 +17,6 @@
 # limitations under the License.
 #
 
-
-Chef::Log.warn("Using recipe 'openvswitch::default' is DEPRECATED! Use recipe 'openvswitch::install' instead.")
-
-include_recipe 'openvswitch::install'
+node['openvswitch']['packages'].each do |pkg|
+  package pkg
+end
