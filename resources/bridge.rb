@@ -22,6 +22,7 @@ actions :add_br, :del_br
 
 attribute :name,  :kind_of => String, :name_attribute => true
 attribute :ports, :kind_of => Array
+attribute :vlan, :kind_of => [String,Array], :default => []
 
 def initialize(*args)
   super

@@ -5,6 +5,10 @@ end
 use_inline_resources
 
 action :add_br do
+  bridge_name = new_resource.name
+
+  new_resource.updated_by_last_action(false)
+
   if br_exists?(new_resource.name)
     cmd_str = "ovs-vsctl add-br #{new_resource.name}"
     execute cmd_str do
@@ -27,6 +31,21 @@ action :add_br do
       else
         Chef::Log.info "Port #{port} already add - nothing to do"
       end
+    end
+  end
+
+  # create vlan interfaces
+  Array(new_resource.vlan).each do |vlan|
+    vlan_br_name = [bridge_name, '.', vlan].join
+    if br_exists?(vlan_br_name)
+      cmd_str = "ovs-vsctl add-br '#{vlan_br_name}' '#{bridge_name}' #{vlan}"
+      execute cmd_str do
+        Chef::Log.debug "ovs_add_br: #{cmd_str}"
+        Chef::Log.info "Create new ovs (vlan) bridge: #{vlan_br_name}"
+        new_resource.updated_by_last_action(true)
+      end
+    else
+      Chef::Log.info "VLAN interfate #{vlan_br_name} already added. Skipping.."
     end
   end
 end
